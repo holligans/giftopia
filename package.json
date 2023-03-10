@@ -1,0 +1,22 @@
+{
+  "name": "giftopia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holligans/giftopia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/holligans/giftopia/issues"
+  },
+  "homepage": "https://github.com/holligans/giftopia#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
