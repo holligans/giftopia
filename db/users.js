@@ -1,0 +1,73 @@
+const users = [{
+  "id": 1,
+  "first_name": "Ingamar",
+  "last_name": "Dziwisz",
+  "email": "idziwisz0@reverbnation.com",
+  "gender": "Genderqueer",
+  "ip_address": "126.72.69.146"
+}, {
+  "id": 2,
+  "first_name": "Dottie",
+  "last_name": "Hannay",
+  "email": "dhannay1@hatena.ne.jp",
+  "gender": "Female",
+  "ip_address": "112.48.228.92"
+}, {
+  "id": 3,
+  "first_name": "Conan",
+  "last_name": "Scole",
+  "email": "cscole2@kickstarter.com",
+  "gender": "Male",
+  "ip_address": "70.64.124.161"
+}, {
+  "id": 4,
+  "first_name": "Hart",
+  "last_name": "Rikard",
+  "email": "hrikard3@livejournal.com",
+  "gender": "Male",
+  "ip_address": "232.248.148.58"
+}, {
+  "id": 5,
+  "first_name": "Charmion",
+  "last_name": "Wigglesworth",
+  "email": "cwigglesworth4@hatena.ne.jp",
+  "gender": "Female",
+  "ip_address": "45.252.86.185"
+}, {
+  "id": 6,
+  "first_name": "Aggi",
+  "last_name": "Josselson",
+  "email": "ajosselson5@ycombinator.com",
+  "gender": "Female",
+  "ip_address": "65.254.88.175"
+}, {
+  "id": 7,
+  "first_name": "Shannah",
+  "last_name": "Raine",
+  "email": "sraine6@zdnet.com",
+  "gender": "Female",
+  "ip_address": "49.48.95.127"
+}, {
+  "id": 8,
+  "first_name": "Alexandr",
+  "last_name": "Aitkin",
+  "email": "aaitkin7@cpanel.net",
+  "gender": "Male",
+  "ip_address": "132.9.234.144"
+}, {
+  "id": 9,
+  "first_name": "Shannon",
+  "last_name": "Buddell",
+  "email": "sbuddell8@auda.org.au",
+  "gender": "Male",
+  "ip_address": "41.168.216.20"
+}, {
+  "id": 10,
+  "first_name": "Paolo",
+  "last_name": "Edinburough",
+  "email": "pedinburough9@linkedin.com",
+  "gender": "Male",
+  "ip_address": "169.227.103.109"
+}];
+
+module.exports = {users};
