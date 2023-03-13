@@ -23,8 +23,21 @@ app.get("/api/users/:userId", (req, res) => {
     return res.json(newUser);
 });
 
-app.all("*", (req, res) => {
-    res.sendStatus(404).send("Not found");
+app.get("/api/v1/query", (req, res) => {
+    let sortedUsers = [ ...users];
+    const {search, limit} = req.query;
+    if(search){
+        sortedUsers = sortedUsers.filter(sortedUser => sortedUser.first_name.startsWith(search));
+    }
+    if(Number(limit)){
+        sortedUsers = sortedUsers.slice(0, Number(limit));
+    }
+    return res.json(sortedUsers);
 });
+
+// app.all("*", (req, res) => {
+//     console.log("i'm here too");
+//     res.sendStatus(404).send("Not found");
+// });
 
 app.listen(5000, () => console.log("Server listen to port:5000.."))
