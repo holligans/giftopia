@@ -1,24 +1,32 @@
 const express = require('express');
-const path = require('path');
 const {users} = require('./db/users');
+const authorization = require('./middlewares/authorization');
+const logger = require('./middlewares/logger');
 
 const app = express();
 
+app.use([logger, authorization]);
 app.use(express.static('statics'));
 
 app.get("/api/users", (req, res) => {
-    const newUsers = users.map(user => {
-        const {id, first_name, gender} = user;
-        return {id, first_name, gender};
-    });
-    res.json(newUsers);
+    const {authorization} = req;
+    if(authorization){
+        const newUsers = users.map(user => {
+            const {id, first_name, gender} = user;
+            return {id, first_name, gender};
+        });
+        console.log("here!!");
+        res.status(200).json(newUsers);
+        return;
+    }
+    res.status(401).send("Unauthorized user");
 });
 
-app.get("/api/users/:userId", (req, res) => {
+app.get("/api/users/:userId", authorization, (req, res) => {
     const {userId} = req.params;
     const newUser = users.find(user => user.id === Number(userId));
     if(!newUser){
-        return res.sendStatus(404).send("User not found");
+        return res.status(404).send("User not found");
     }
     return res.json(newUser);
 });
